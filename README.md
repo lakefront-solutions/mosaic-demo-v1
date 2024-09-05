@@ -12,11 +12,11 @@ Pizza ordering Android App Demo 1
       </ul>
     </li>
     <li>
-      <a href="#introduction">Introduction to Android Development</a>
+      <a href="#introduction-to-android-development">Introduction to Android Development</a>
         <ul>
-          <li><a href="#what-is-android">What is Android?</a></li>
-          <li><a href="#overview-of-android-ecosystem">Overview of the Android ecosystem</a></li>
-          <li><a href="#java-role-in-android">The role of Java in Android development</a></li>
+          <li>What is Android?</li>
+          <li>Overview of the Android ecosystem</li>
+          <li>The role of Java in Android development</li>
         </ul>
     </li>
     <li>
