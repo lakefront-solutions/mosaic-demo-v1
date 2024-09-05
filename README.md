@@ -139,6 +139,20 @@ This section lists the major frameworks/libraries used to for building this proj
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
+### Understanding Android Project Structure
+  * __App Module:__
+    The main module containing your app’s source code, resources, and app-level settings like the __AndroidManifest.xml__ and __build.gradle files__. When you create a new project, the default app module is named “app”
+  * __Library Module:__
+    __(Project View Mode): External Libraries__
+    Contains reusable code that can be used as a dependency in other app modules or projects. It generates an Android Archive (AAR) file
+  * __Project Files:__
+    - __build.gradle:__ The root build file containing plugin declarations and common configurations for all subprojects.
+    - __settings.gradle:__ Contains global build information, including project names and subprojects to include.
+    - __local.properties:__ Contains properties related to the local machine, such as the Android SDK location (excluded from source control), you may also add your api keys here.
+  * __Directory Structure__:
+    - __src/main/AndroidManifest.xml:__ Declares essential information about your app, including components and permissions.
+    - __src/main/java:__ Contains the Java or Kotlin source code for your app.
+    - __src/main/res:__ Contains resource files like layouts, drawables, and strings.
+      
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
