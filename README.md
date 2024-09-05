@@ -156,3 +156,43 @@ This section lists the major frameworks/libraries used to for building this proj
       
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Understanding Android Components
+  * __Activities:__
+  Activities represent a single screen with a user interface. They are the entry point for interacting with the user.
+  ```sh
+  public class MainActivity extends AppCompatActivity {
+    // Code for the activity
+  }
+  ```
+  * __Services:__
+    Services run in the background to perform long-running operations or to perform work for remote processes.
+    Example: A music player app might use a service to play music in the background while the user is in a different app
+  ```sh
+  public class MusicService extends Service {
+    // Code for the service
+  }
+  ```
+  * __Content Providers:__
+    Content providers manage access to a structured set of data. They encapsulate the data and provide mechanisms for defining data security. In short, a Content Provider is Andoid's way of allowing apps to share their data with other apps
+    Example: An app that stores user contacts might use a content provider to manage contact data.
+  ```sh
+  public class ContactsProvider extends ContentProvider {
+    // Code for the provider
+  }
+  ```
+  * __Broadcast Receivers:__
+    Broadcast receivers respond to system-wide broadcast announcements. They enable the app to listen for specific broadcast messages from the system or other apps.
+    Example: An app might use a broadcast receiver to detect when the device low battery.
+  ```sh
+  batteryLevel = new BatteryLevel();
+  mContext.registerReceiver(batteryLevel, new IntentFilter(Intent.ACTION_BATTERY_LOW));
+  ```
+  * __Intents:__
+    Intents are messaging objects used to request an action from another app component. They facilitate communication between different components.
+    Example: An intent can be used to start a new activity or to send a broadcast. 
+  ```sh
+  Intent intent = new Intent(this, NewActivity.class);
+  startActivity(intent);
+  ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
