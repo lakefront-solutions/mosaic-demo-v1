@@ -30,9 +30,10 @@ Pizza ordering Android App Demo 1
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![mosaic-app](https://github.com/user-attachments/assets/b0690db7-545e-4490-8a57-00a8c444b17b)
-
-This project serves as a comprehensive guide for individuals seeking to embark on Android development. It offers foundational knowledge essential for beginners, covering key concepts, tools, and best practices in Android application development. Additionally, the project delves into the integration of artificial intelligence (AI) within Android applications, providing insights and practical examples to enhance your understanding of AI implementation. By the end of this project, you will have a solid grasp of Android development and the ability to leverage AI technologies to create innovative and intelligent applications.
+<div style="display: flex; align-items: center;">
+  <img src="https://github.com/user-attachments/assets/b0690db7-545e-4490-8a57-00a8c444b17b" alt="mosaic-app" height="300" width="150" style="margin-right: 10px;"/>
+  <p>This project serves as a comprehensive guide for individuals seeking to embark on Android development. It offers foundational knowledge essential for beginners, covering key concepts, tools, and best practices in Android application development. Additionally, the project delves into the integration of artificial intelligence (AI) within Android applications, providing insights and practical examples to enhance your understanding of AI implementation. By the end of this project, you will have a solid grasp of Android development and the ability to leverage AI technologies to create innovative and intelligent applications.</p>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
