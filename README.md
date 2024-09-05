@@ -158,11 +158,19 @@ This section lists the major frameworks/libraries used to for building this proj
 
 ### Understanding Android Components
   * __Activities:__
-  Activities represent a single screen with a user interface. They are the entry point for interacting with the user.
+  Activities represent a single screen with a user interface. They are the entry point for interacting with the user. Fragments have their own lifecycle, which is closely tied to the lifecycle of the host activity. This allows for better control over the UI components and their state management.
   ```sh
   public class MainActivity extends AppCompatActivity {
     // Code for the activity
   }
+  ```
+  * __Fragments:__
+  Fragments introduce modularity into your app’s UI by letting you divide the UI into discrete chunks. This makes it easier to manage and reuse components across different parts of your app.
+  ```sh
+  FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+  transaction.replace(R.id.fragment_container, new ExampleFragment());
+  transaction.addToBackStack(null);
+  transaction.commit();
   ```
   * __Services:__
     Services run in the background to perform long-running operations or to perform work for remote processes.
@@ -194,5 +202,101 @@ This section lists the major frameworks/libraries used to for building this proj
   Intent intent = new Intent(this, NewActivity.class);
   startActivity(intent);
   ```
+  * __Layouts:__
+    Layouts are containers that hold and arrange views in a specific manner. They define the structure and positioning of the UI components
+    Common Layouts:
+    * LinearLayout: Arranges views in a single row or column.
+    * RelativeLayout: Positions views relative to each other or the parent container.
+    * ConstraintLayout: A flexible layout that allows you to create complex layouts with a flat view hierarchy.
+    * FrameLayout: A simple layout that stacks views on top of each other.
+    * GridLayout: Arranges views in a grid format.
+    * Layout Editor:
+Use the Layout Editor in Android Studio to visually design your UI. Drag and drop UI components from the palette, and configure their properties using the attributes panel
 
+  * __Views:__
+    Views are the basic building blocks of an Android user interface. They represent the UI components that users interact with, such as buttons, text fields, images, and more1.
+  Common Views:
+    * TextView: Displays text to the user.
+    * Button: A clickable button.
+    * ImageView: Displays an image.
+    * EditText: A text field for user input.
+    * ListViews
+    * RecyclerView: A flexible view for displaying large data sets in a scrollable list.
+    * __ListViews and Adapters:__
+      ListViews are android elements used to display items in a list. 
+      Adapters are used to bind an array of data to a ListView. It is a simple adapter that can handle a single list of items.
+    ```sh
+    ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dataArray);
+    listView.setAdapter(adapter);
+    ```
+    ```sh
+    public class CustomAdapter extends BaseAdapter {
+      // Implementation of custom adapter
+    }
+    ```
+  * __Basic UI Design:__
+    XML Layouts: Designing with XML.
+    ```sh
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, World!" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me" />
+    </LinearLayout>
+    ```
+  * __Introduction to Material Design principles:__
+    [Material Design](https://m3.material.io) is a design system developed by Google to create high-quality digital experiences across various platforms, including Android, iOS, Flutter, and the web. It is inspired by the physical world and its textures, incorporating principles from print design to create a cohesive and immersive user experience12.
+  Using Material design
+    * Add Material Components to your project: Open your build.gradle file and add the following dependency:
+    ```sh
+    implementation 'com.google.android.material:material:1.4.0'
+    ```
+    * Update your app theme:
+    ```sh
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primaryVariant</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorSecondary">@color/secondary</item>
+    </style>
+    ```
+    * Use Material Components in your layouts. Example material button
+    ```sh
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Material Button" />
+    ```
+  * Handling User inputs: Example Button.
+
+    __XML__
+    ```sh
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Material Button" />
+    ```
+    __JAVA__
+    ```sh
+    MaterialButton button = findViewById(R.id.materialButton);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            // Handle button click
+        }
+    });
+    ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
