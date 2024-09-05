@@ -20,10 +20,19 @@ Pizza ordering Android App Demo 1
         </ul>
     </li>
     <li>
+      <a href="#prerequisites-for-android-app-development">Prerequisites for Android App Development</a>
+      <ul>
+          <li><a href="#basic-programming-knowledge">Basic Programming Knowledge</a></li>
+          <li><a href="#development-environment">Development Environment</a></li>
+        </ul>
+    </li>
+    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#understanding-android-project-structure">Understanding Android Project Structure</a></li>
+        <li><a href="#understanding-android-components">Understanding Android Components</a></li>
+        <li><a href="#understanding-android-components">Understanding Android Components</a></li>
+        <li><a href="#basic-ui-design">Basic UI Design</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -108,6 +117,9 @@ This section lists the major frameworks/libraries used to for building this proj
   * Familiarity with programming concepts and languages such as Java or Kotlin.
   * Understanding of object-oriented programming (OOP) principles.
   * Basic understanding of XML (eXtensible Markup Language) for designing user interfaces in Android
+  * Basic [MVC Knowledge](https://www.codecademy.com/article/mvc) (Model View Controller)
+    
+
 
 ### Development Environment:
   This is a nice youtube video tutorial for installing Android Studio: [Android Studio + SDK Configs](https://www.youtube.com/watch?v=4pCBPbdHARE)
@@ -129,4 +141,5 @@ This section lists the major frameworks/libraries used to for building this proj
 <!-- GETTING STARTED -->
 ## Getting Started
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
