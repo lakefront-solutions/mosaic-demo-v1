@@ -31,8 +31,8 @@ Pizza ordering Android App Demo 1
       <ul>
         <li><a href="#understanding-android-project-structure">Understanding Android Project Structure</a></li>
         <li><a href="#understanding-android-components">Understanding Android Components</a></li>
-        <li><a href="#understanding-android-components">Understanding Android Components</a></li>
         <li><a href="#basic-ui-design">Basic UI Design</a></li>
+        <li><a href="#working-with-data">Working with Data</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -234,8 +234,8 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
       // Implementation of custom adapter
     }
     ```
-  * __Basic UI Design:__
-    XML Layouts: Designing with XML.
+### Basic UI Design:
+  * __XML Layouts: Designing with XML.__
     ```sh
     <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -279,7 +279,7 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
         android:layout_height="wrap_content"
         android:text="Material Button" />
     ```
-  * Handling User inputs: Example Button.
+  * __Handling User inputs: Example Button.__
 
     __XML__
     ```sh
@@ -300,3 +300,82 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
     });
     ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Working with Data
+  * __Managing data using SharedPreferences:__
+    SharedPreferences is a simple way to store small amounts of data as key-value pairs.
+    
+    __Get a SharedPreferences instance:__
+    ```sh
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+    ```
+    __Save data to SharedPreferences:__
+    ```sh
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("key", "value");
+        editor.apply();
+    ```
+    __Retrieve data from SharedPreferences:__
+    ```sh
+        String value = sharedPreferences.getString("key", "default_value");
+    ```
+
+  * __Basics of Networking in Android (Using REST APIs)__
+    - Android permission Intro
+      ```sh
+        <uses-permission android:name="android.permission.INTERNET" />
+      ```
+    - Retrofit
+    - OkHttp3
+      Using OkHttp3:
+      __add the OkHttp3 dependency to your build.gradle file:__
+      ```sh
+        implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+      ```
+      __Make Network Requests__
+      You can make both synchronous and asynchronous network requests using OkHttp3. Here’s an example of how to perform a GET request:
+      
+      __synchronous Get Request__
+      ```sh
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+            .url("https://api.example.com/data")
+            .build();
+        
+        try (Response response = client.newCall(request).execute()) {
+            if (response.isSuccessful()) {
+                String responseData = response.body().string();
+                // Handle the response
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+      ```
+      __asynchronous Get Request__
+      ```sh
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+            .url("https://api.example.com/data")
+            .build();
+        
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+            }
+        
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String responseData = response.body().string();
+                    // Handle the response
+                }
+            }
+        });
+      ```
+      
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+ 
+    
+    
