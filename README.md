@@ -35,3 +35,11 @@ Pizza ordering Android App Demo 1
 This project serves as a comprehensive guide for individuals seeking to embark on Android development. It offers foundational knowledge essential for beginners, covering key concepts, tools, and best practices in Android application development. Additionally, the project delves into the integration of artificial intelligence (AI) within Android applications, providing insights and practical examples to enhance your understanding of AI implementation. By the end of this project, you will have a solid grasp of Android development and the ability to leverage AI technologies to create innovative and intelligent applications.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+This section lists the major frameworks/libraries used to for building this project.
+
+* [<img src="https://github.com/user-attachments/assets/c3b4c089-60f2-41dc-90de-16c7a5a29c43" alt="Android" width="24"/>](https://en.wikipedia.org/wiki/Android_software_development) Android
+* [<img src="https://github.com/user-attachments/assets/ee76c9f1-dddd-4a48-8110-af76965c1e97" alt="Java" width="24"/>](https://en.wikipedia.org/wiki/Java_programming_language) Java
+* [<img src="https://github.com/user-attachments/assets/7ff366e0-e7b1-4ae2-8aa4-a088fa7f499f" alt="AI" width="24"/>](https://en.wikipedia.org/wiki/Artificial_intelligence) Artificial intelligence
