@@ -103,7 +103,30 @@ This section lists the major frameworks/libraries used to for building this proj
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
+## Prerequisites for Android App Development
+### Basic Programming Knowledge:
+  * Familiarity with programming concepts and languages such as Java or Kotlin.
+  * Understanding of object-oriented programming (OOP) principles.
+  * Basic understanding of XML (eXtensible Markup Language) for designing user interfaces in Android
+
+### Development Environment:
+  This is a nice youtube video tutorial for installing Android Studio: [Android Studio + SDK Configs](https://www.youtube.com/watch?v=4pCBPbdHARE)
+  * __Android Studio:__ Download and install the latest version of [Android Studio](https://developer.android.com/studio?gad_source=1&gbraid=0AAAAAC-IOZlrnNqQZGfEfs8BT0KNNN9rC&gclid=CjwKCAjwreW2BhBhEiwAavLwfOodAVfTgxfGKxwF1xm20wcf83NgQYcQ4crQPx7KyOkW2rQM0TWWFRoCGPQQAvD_BwE&gclsrc=aw.ds), the official Integrated Development Environment (IDE) for Android development.
+  * __Android SDK:__ when prompted, install the Android Software development Kit (SDK). Android SDK is a collection of libraries and Software Development tools that are essential for Developing Android Applications. Whenever Google releases a new version or update of Android Software, a corresponding SDK also releases with it. You may also install newer versions by doing these steps:
+    - Open Android Studio -> Click on Tools -> Click on SDK Manager and install any version of your choice.
+  * __Setting up an Emulator:__
+    - Click on Tools -> Device Manager -> Add new Device -> create virtual device
+    - Follow the prompts.
+   
+  * __Using a Physical Device:__
+    Alternatively, you can use a physical Android device for testing by enabling Developer Options and USB Debugging.
+    - Click on settings -> About ...
+    - rapidly tap Build number seven times in a row (A popup message will appear when you are close to enabling the mode)
+    - Go to developer options and enbale USB Debugging. 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+
