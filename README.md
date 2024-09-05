@@ -12,6 +12,14 @@ Pizza ordering Android App Demo 1
       </ul>
     </li>
     <li>
+      <a href="#introduction">Introduction to Android Development</a>
+        <ul>
+          <li><a href="#what-is-android">What is Android?</a></li>
+          <li><a href="#overview-of-android-ecosystem">Overview of the Android ecosystem</a></li>
+          <li><a href="#java-role-in-android">The role of Java in Android development</a></li>
+        </ul>
+    </li>
+    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -44,3 +52,58 @@ This section lists the major frameworks/libraries used to for building this proj
 * [<img src="https://github.com/user-attachments/assets/c3b4c089-60f2-41dc-90de-16c7a5a29c43" alt="Android" width="24"/>](https://en.wikipedia.org/wiki/Android_software_development) Android
 * [<img src="https://github.com/user-attachments/assets/ee76c9f1-dddd-4a48-8110-af76965c1e97" alt="Java" width="24"/>](https://en.wikipedia.org/wiki/Java_programming_language) Java
 * [<img src="https://github.com/user-attachments/assets/7ff366e0-e7b1-4ae2-8aa4-a088fa7f499f" alt="AI" width="24"/>](https://en.wikipedia.org/wiki/Artificial_intelligence) Artificial intelligence
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Introduction to Android Development
+- Android operating system is the largest installed base among various mobile platforms across the globe. [BACKLINKO](https://backlinko.com/iphone-vs-android-statistics#)
+  * As of early 2024, Android has a 70.69% market share worldwide.
+  * In the US, iPhones hold a market share of 60.77%.
+  * More 3 billion Android devices are currently active.
+  * Android smartphones accounted for 56% of all smartphone sales worldwide in Q4 2023.
+    
+- History
+  * Android was created by the [Open Handset Alliance](https://en.wikipedia.org/wiki/Open_Handset_Alliance), which is led by Google.
+  * On August 18, 2008, the Android 0.9 SDK beta was released
+  * On December 5, 2008, Google announced the first Android Dev Phone.
+    
+- Android OS components:
+  * __Linux Kernel:__
+    The core of the Android operating system is based on the Linux kernel, which is written in C and C++
+  * __Native Libraries:__
+    Many core components and services of the Android system are built using native code written in C and C++. These native libraries provide essential functionalities and are exposed to developers through Java APIs.
+  * __Android Runtime (ART):__
+    The Android Runtime (ART) and its predecessor, Dalvik, are responsible for running Android applications. These runtimes execute bytecode compiled from __Java source code__ or __Kotlin__
+  * __Java API Framework:__
+    The higher-level APIs and application framework are written in Java. This allows developers to write Android applications using Java, which are then compiled into bytecode and run on the Android Runtime
+    
+- Android operating system is [open source](https://en.wikipedia.org/wiki/Open_source).
+  * Freely available for possible modification and redistribution.
+  * [CyanogenMod](https://en.wikipedia.org/wiki/CyanogenMod) is one of the popular open source Android redistributions. 
+  * Limitations: Closed-source Google applications such as [Google Play](https://en.wikipedia.org/wiki/Google_Play) and google GPS navigation.
+  
+- Role of Java in Android development.
+  Java 
+  Java is one of the preferred langugages for android developments and that is because:
+  * __JAVA is an Object-Oriented Programming (OOP):__
+    Java’s OOP principles make it easier to manage and maintain complex codebases. This modular approach allows developers to create reusable and scalable code.
+  * __Platform Independence:__
+    Java’s “Write Once, Run Anywhere” capability ensures that code written in Java can run on any device that supports the Java Virtual Machine (JVM). This cross-platform compatibility is a significant advantage for Android development
+  * __Robust and Secure:__
+    Java is known for its robustness and security features. It includes strong memory management, exception handling, and a comprehensive security framework, making it ideal for developing secure Android applications
+  * __Extensive Libraries and Tools:__
+    Java offers a rich set of libraries and development tools that simplify the development process. These libraries provide pre-built functionalities, reducing the need to write code from scratch
+  * __Performance:__
+    Java’s performance is optimized for Android development. The Just-In-Time (JIT) compiler and efficient garbage collection contribute to the smooth performance of Android applications1.
+  * __Existing Developer Base:__
+    Java was already a widely-used and well-known programming language with a large community of developers. This meant that there was a ready pool of talent familiar with Java, making it easier for Google to attract developers to the Android platform2.
+  * __Sun Microsystems’ Support:__
+    At the time, Sun Microsystems, the original creator of Java, actively encouraged the adoption of Java and had an agreement with Google to use Java for Android. This support was a significant factor in Google’s decision
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
