@@ -118,9 +118,8 @@ This section lists the major frameworks/libraries used to for building this proj
   * Understanding of object-oriented programming (OOP) principles.
   * Basic understanding of XML (eXtensible Markup Language) for designing user interfaces in Android
   * Basic [MVC Knowledge](https://www.codecademy.com/article/mvc) (Model View Controller)
+    <img src="https://github.com/user-attachments/assets/38805229-a71a-4ac5-8a6c-d2571b8b0cc7" alt="MVC" width="300" height="300"/>
     
-
-
 ### Development Environment:
   This is a nice youtube video tutorial for installing Android Studio: [Android Studio + SDK Configs](https://www.youtube.com/watch?v=4pCBPbdHARE)
   * __Android Studio:__ Download and install the latest version of [Android Studio](https://developer.android.com/studio?gad_source=1&gbraid=0AAAAAC-IOZlrnNqQZGfEfs8BT0KNNN9rC&gclid=CjwKCAjwreW2BhBhEiwAavLwfOodAVfTgxfGKxwF1xm20wcf83NgQYcQ4crQPx7KyOkW2rQM0TWWFRoCGPQQAvD_BwE&gclsrc=aw.ds), the official Integrated Development Environment (IDE) for Android development.
