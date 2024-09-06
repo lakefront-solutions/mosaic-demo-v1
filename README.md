@@ -33,12 +33,15 @@ Pizza ordering Android App Demo 1
         <li><a href="#understanding-android-components">Understanding Android Components</a></li>
         <li><a href="#basic-ui-design">Basic UI Design</a></li>
         <li><a href="#working-with-data">Working with Data</a></li>
+        <li><a href="#understanding-android-activity-lifecycle">Understanding Android Activity Lifecycle</a></li>
+        <li><a href="#introduction-to-java-for-android">Introduction to Java for Android</a></li>
+        <li><a href="#what-is-an-interface">What is an Interface?</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#building-the-pizza-search-app">Building the Pizza Search App</a></li>
+    <li><a href="#testing-and-debugging">Testing and Debugging</a></li>
+    <li><a href="#deploying-your-app:">Deploying Your App</a></li>
+    <li><a href="#final-app-demo">Final App Demo</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -376,6 +379,161 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
       
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
- 
-    
-    
+### Understanding Android Activity Lifecycle
+  * __onCreate()__
+    * __Called when:__ The activity is first created.
+    * __Purpose:__ Initialize the activity. This is where you should perform one-time setup procedures, such as creating the UI, initializing variables, and binding data to lists.
+    * __Example:__
+       ```sh
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            // Initialize components here
+        }
+      ```
+       
+  * __onStart()__
+    * __Called when:__ The activity becomes visible to the user.
+    * __Purpose:__ Prepare the activity to enter the foreground and become interactive.
+    * __Example:__
+       ```sh
+        @Override
+        protected void onStart() {
+            super.onStart();
+            // Perform tasks to make the activity visible
+        }
+      ```
+  * __onResume()__
+    * __Called when:__ The activity starts interacting with the user.
+    * __Purpose:__ Resume any paused UI updates, animations, or other ongoing actions.
+      ```sh
+          @Override
+          protected void onResume() {
+              super.onResume();
+              // Resume interactions with the user
+          }
+      ```
+  * __onDestroy()__
+    * __Called when:__ The activity is about to be destroyed.
+    * __Purpose:__ Clean up any resources, such as threads or database connections, that need to be released.
+      ```sh
+          @Override
+          protected void onDestroy() {
+              super.onDestroy();
+              // Clean up resources
+          }
+      ```
+
+## Introduction to Java for Android
+### Basic Java concepts relevant to Android development (OOP, classes, methods)
+  *  __Object-Oriented Programming (OOP)__
+    OOP is a programming paradigm based on the concept of “objects,” which can contain data and code. The main principles of OOP are:
+    * __Encapsulation:__ Bundling data (fields) and methods (functions) that operate on the data into a single unit, or class.
+    * __Inheritance:__ Creating new classes based on existing ones, allowing for code reuse and the creation of a hierarchical relationship between classes.
+    * __Polymorphism:__ Allowing objects to be treated as instances of their parent class rather than their actual class, enabling one interface to be used for a general class of actions.
+    * __Abstraction:__ Hiding the complex implementation details and showing only the necessary features of an object.
+
+  * __Classes and Objects__
+    * __Class:__
+      A blueprint for creating objects. It defines a datatype by bundling data and methods that work on the data into one single unit.
+      ```sh
+          public class Car {
+              // Fields
+              private String color;
+              private String model;
+          
+              // Constructor
+              public Car(String color, String model) {
+                  this.color = color;
+                  this.model = model;
+              }
+          
+              // Methods
+              public void displayInfo() {
+                  System.out.println("Car model: " + model + ", Color: " + color);
+              }
+          }
+      ```
+    * __Object:__
+      An instance of a class. It is created using the new keyword
+      ```sh
+          Car myCar = new Car("Red", "Toyota");
+          myCar.displayInfo(); // Output: Car model: Toyota, Color: Red
+      ```
+  * __Methods:__
+    Methods are functions defined within a class that describe the behaviors of the objects created from the class.
+    ```sh
+          public class Calculator {
+              // Method to add two numbers
+              public int add(int a, int b) {
+                  return a + b;
+              }
+          
+              // Method to subtract two numbers
+              public int subtract(int a, int b) {
+                  return a - b;
+              }
+          }
+    ```
+  * __Relevance to Android Development__
+    * __Activities:__ (Inheritance) In Android, an activity represents a single screen with a user interface. Each activity is implemented as a subclass of the Activity class.
+    * __XML Layouts:__ (Abstraction & )Define the UI elements and their properties. These layouts are linked to activities.
+    * __Intents:__ Used to start activities or communicate between components.
+    * __AsyncTask:__ (Abstraction) Helps in performing background operations and updating the UI thread.
+  * __Event handling in Android.__
+    Event handling in Android involves managing user interactions with the app’s UI components. Here are the key concepts and methods you need to know:
+    * __Event Listeners and Handlers__
+      Event listeners are interfaces in the View class that contain callback methods. These methods are called when the user interacts with the UI component to which the listener is registered. Event handlers are the methods that handle these events.
+      __Common Event Listeners and Handlers:__
+      * __OnClickListener__
+      * __OnLongClickListener__
+  * __What is an Interface?__
+    An interface in Java is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields or constructors. They are used to specify a set of methods that a class must implement.
+    * __Creating an Interface__
+      ```sh
+          public interface MyInterface {
+              void myMethod();
+          }
+      ```
+    * __Implementing an Interface__
+      A class that implements an interface must provide implementations for all the methods declared in the interface:
+      ```sh
+          public class MyClass implements MyInterface {
+              @Override
+              public void myMethod() {
+                  // Implementation of myMethod
+              }
+          }
+      ```
+    * __Common Use Cases in Android__
+      * __Event Handling:__ example: __OnClickListener__
+      * __Callbacks:__
+        Interfaces are used to create callback methods. For example, you might define an interface to handle communication between a fragment and its parent activity.
+
+## Building the Pizza Search App:
+  * Step-by-step walkthrough of the app's key features.
+  * Using an API and AI to search for pizza.
+
+## Testing and Debugging:
+  * Using the Android Emulator.
+  * Debugging common issues
+
+## Deploying Your App
+  * Running your app on a physical device.
+  * Publishing basics (introduction to Google Play Store). [Youtube](https://www.youtube.com/watch?v=5GHT4QtotE4)
+    * __Create a Developer Account:__ Sign up for a developer account on the Google Play Console.
+    * __Prepare Your App for Release:__ Build a release version of your app.
+    * __Store Listing:__ Provide details like app title, description, screenshots, and promotional graphics.
+    * __App Release:__ Choose how you want to release your app (alpha, beta, or production).
+    * __Content Rating:__ Complete the content rating questionnaire.
+    * __Pricing & Distribution:__ Set the price and distribution options.
+    * __App Content:__ Add any additional content like in-app purchases or ads.
+    * __App Releases:__ Upload the APK file and publish your app
+
+## Final App Demo
+  * Demonstrating the pizza search app in action.
+  * Discussing potential enhancements and next steps.
+    * In App purchase: (Google Pay | Credit Cards | Orange Money | etc)
+    * Clear cart
+    * Audio 
