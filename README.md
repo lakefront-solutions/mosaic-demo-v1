@@ -40,7 +40,7 @@ Pizza ordering Android App Demo 1
     </li>
     <li><a href="#building-the-pizza-search-app">Building the Pizza Search App</a></li>
     <li><a href="#testing-and-debugging">Testing and Debugging</a></li>
-    <li><a href="#deploying-your-app:">Deploying Your App</a></li>
+    <li><a href="#deploying-your-app">Deploying Your App</a></li>
     <li><a href="#final-app-demo">Final App Demo</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
