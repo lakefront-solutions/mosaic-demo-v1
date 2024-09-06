@@ -42,8 +42,7 @@ Pizza ordering Android App Demo 1
     <li><a href="#testing-and-debugging">Testing and Debugging</a></li>
     <li><a href="#deploying-your-app">Deploying Your App</a></li>
     <li><a href="#final-app-demo">Final App Demo</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#garbage-collection">Android Garbage Collection</a></li>
   </ol>
 </details>
 
@@ -536,4 +535,66 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
   * Discussing potential enhancements and next steps.
     * In App purchase: (Google Pay | Credit Cards | Orange Money | etc)
     * Clear cart
-    * Audio 
+    * allow users to complete all app actions using their voice.
+   
+## Android Garbage Collection [Nice Article by Augusto Herbel](https://proandroiddev.com/collecting-the-garbage-a-brief-history-of-gc-over-android-versions-f7f5583e433c)
+  * __Introduction to Garbage Collection (GC)__
+    * GC is a form of automatic memory management.
+    * The primary goal is to reclaim memory occupied by objects that are no longer in use.
+  * Evolution of GC in Android
+    * __Dalvik VM:__ Early versions of Android used Dalvik VM, which had a simple GC mechanism.
+    * __ART (Android Runtime):__ Replaced Dalvik in Android 5.0 (Lollipop) with more efficient GC algorithms.
+  * GC Algorithms
+    * __Mark-and-Sweep:__ Identifies and marks live objects, then sweeps through to reclaim memory from unmarked objects.
+    * __Generational GC:__ Divides objects into generations (young and old) to optimize GC performance.
+  * GC Triggers
+    * GC can be triggered by various events, such as memory allocation failures or reaching a predefined memory limit.
+  * Impact on Performance
+    * GC can cause pauses in application execution, leading to performance issues like jank (unresponsive UI).
+    * Optimizations in ART aim to minimize these pauses and improve overall performance.
+  * Best Practices for Developers
+    * Minimize object creation and reuse objects when possible.
+      __Best Practice:__ Avoid creating unnecessary objects to reduce the workload on the garbage collector.
+      __Example:__ Instead of creating a new String object in a loop, use a StringBuilder to concatenate strings.
+      ```sh
+          // Inefficient
+          for (int i = 0; i < 1000; i++) {
+              String result = "Number: " + i;
+          }
+          
+          // Efficient
+          StringBuilder builder = new StringBuilder();
+          for (int i = 0; i < 1000; i++) {
+              builder.append("Number: ").append(i);
+          }
+          String result = builder.toString();
+      ```
+      ```sh
+          // Inefficient
+          Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+          
+          // Efficient
+          Bitmap bitmap = bitmapPool.get(width, height, Bitmap.Config.ARGB_8888);
+      ```
+    * Use memory profiling tools to identify and fix memory leaks.
+      __Best Practice:__ Regularly use memory profiling tools to identify and fix memory leaks.
+      __Example:__ Use Android Studio’s Memory Profiler to monitor your app’s memory usage and detect memory leaks.
+      __View -> Tool Windows -> Profiler__ the select the memory usage
+    * Avoid Memory Leaks
+      __Best Practice:__ Ensure that objects are not unintentionally retained, leading to memory leaks.
+      __Example:__ Use __WeakReference__ for objects that should not prevent garbage collection.
+      ```sh
+          BitmapFactory.Options options = new BitmapFactory.Options();
+          options.inSampleSize = 4; // Downsample by a factor of 4
+          Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.large_image, options);
+      ```
+    * Avoid Using Static References
+      __Best Practice:__ Avoid using static references to prevent memory leaks.
+      __Example:__ Instead of using a static reference to an __Activity__, use a __WeakReference__.
+      ```sh
+          // Inefficient
+          private static Activity activity;
+          
+          // Efficient
+          private static WeakReference<Activity> activityRef;
+      ```
