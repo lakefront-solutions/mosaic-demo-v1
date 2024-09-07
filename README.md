@@ -601,5 +601,9 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
       ```
 
 ## Optimizing Battery Usage
-    * Use JobScheduler for Background Tasks
-    * 
+    * Use JobScheduler for Background Tasks: Schedule background tasks efficiently using JobScheduler to perform tasks during optimal times.
+    * Optimize Network Usage: Reduce network usage by batching network requests and using efficient data formats.
+    * Use Efficient Location Services: Use location services judiciously and prefer lower power location modes.
+    * Optimize UI Rendering: Reduce unnecessary UI rendering and animations to save battery.
+    * Reduce Wake Locks: Minimize the use of wake locks and release them as soon as possible.
+    * Monitor Battery Usage: View -> Tool Windows -> Profiler
