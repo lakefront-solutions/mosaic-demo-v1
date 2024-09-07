@@ -604,7 +604,7 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
     * Use JobScheduler for Background Tasks
       __Best Practice:__ Schedule background tasks efficiently using JobScheduler to perform tasks during optimal times
       ```sh
-          JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
 JobInfo jobInfo = new JobInfo.Builder(jobId, new ComponentName(this, MyJobService.class))
         .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
         .setRequiresCharging(true)
