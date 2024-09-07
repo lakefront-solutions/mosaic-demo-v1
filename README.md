@@ -598,3 +598,5 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
           // Efficient
           private static WeakReference<Activity> activityRef;
       ```
+
+  ## 
