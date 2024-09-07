@@ -43,6 +43,7 @@ Pizza ordering Android App Demo 1
     <li><a href="#deploying-your-app">Deploying Your App</a></li>
     <li><a href="#final-app-demo">Final App Demo</a></li>
     <li><a href="#garbage-collection">Android Garbage Collection</a></li>
+    <li><a href="#optimizing-battery-usage">Optimizing Battery Usage</a></li>
   </ol>
 </details>
 
@@ -599,4 +600,14 @@ Use the Layout Editor in Android Studio to visually design your UI. Drag and dro
           private static WeakReference<Activity> activityRef;
       ```
 
-  ## 
+  ## Optimizing Battery Usage
+    * Use JobScheduler for Background Tasks
+      __Best Practice:__ Schedule background tasks efficiently using JobScheduler to perform tasks during optimal times
+      ```sh
+          JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+JobInfo jobInfo = new JobInfo.Builder(jobId, new ComponentName(this, MyJobService.class))
+        .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+        .setRequiresCharging(true)
+        .build();
+jobScheduler.schedule(jobInfo);
+      ```
